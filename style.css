@@ -9,52 +9,76 @@ html {
 }
 
 body {
-  background-color: var(--bgColor);
+  grid-template-columns: 3fr 6fr;
   color: var(--textColor);
   font-family: Arial, Helvetica, sans-serif;
-  padding: 0rem 1rem 0rem 3rem;
-  text-align: center;
+  margin: 0px;
+  padding: 1rem;
 }
 header {
+  text-align: center;
+  grid-area: logo;
+}
+
+.main-nav ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  grid-area: nav;
 }
 
-ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  width: 65vw;
+/* Navabar elements */
+a {
+  color: var(--textColor);
+  text-decoration: none;
 }
-.logo {
+
+.main-nav ul li{
   display: inline;
-  display: flex;
-  align-self: center;
-  justify-self: center;
+  letter-spacing: 0.02rem;
 }
-nav ul li{
-  display: inline;
-  font-size: 1.6rem;
-}
-nav li:hover {
+.main-nav li:hover {
   color: var(--bgColor2);
 }
-main article {
+.main-nav ul:last-child li:last-child {
+  background-color: var(--highlightColor);
+  padding: 0.5rem;
+}
+.main-nav {
   display: flex;
   flex-flow: column;
-  justify-items: center;
+  grid-area: nav;
+}
+.intro {
+  grid-area: intro;
 }
 
-main article ul {
-  display: inline-block;
+.benefits {
+  grid-area: benefits;
+}
+/* Article elements */
+article h2 {
+  text-align: center;
+  font-size: 1.45rem;
+}
+p {
   text-align: center;
 }
-nav li:last-child {
-  background-color: var(--highlightColor);
-  padding: 0.7rem 1.32rem;
+
+article ul li {
+  list-style-position: inside;
 }
-nav {
-  display: inline;
+
+
+/* Client showcase */
+
+.client-logos {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.client-logos img {
+  padding: 0.4rem;
+  height: 3.5rem;
 }
