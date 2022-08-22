@@ -3,6 +3,7 @@
   --bgColor2 : #73777B;
   --textColor : #15133C;
   --highlightColor:#EC994B; 
+  box-sizing: border-box;
 }
 html {
   height: 100%;
@@ -12,24 +13,23 @@ h1 {
   margin: 0;
   color: var(--bgColor);
   padding: 0.9rem;
+  text-shadow: #EC994B 0.05rem 0.05rem;
 }
 
 body {
-  grid-template-columns: 3fr 6fr;
+  display: grid;
   color: var(--textColor);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
 }
 header {
   text-align: center;
-  grid-area: logo;
 }
 
 .main-nav ul {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  grid-area: nav;
   background-color: var(--textColor);
   color: var(--bgColor);
   margin: 0;
@@ -52,6 +52,28 @@ color: var(--bgColor);
 .main-nav li:hover {
   color: var(--bgColor2);
 }
+
+#contact-short {
+  background-color: var(--textColor);
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  padding: 0.4rem;
+}
+
+footer img {
+ height: 1.2rem;
+}
+
+#contact-short a {
+  color: var(--bgColor) ;
+  display: flex;
+  align-items: center;
+}
+
+#contact-short img {
+  padding-right: 0.4rem;
+}
 .main-nav ul:last-child li:last-child {
   background-color: var(--highlightColor);
   padding: 0.5rem 1rem;
@@ -60,14 +82,67 @@ color: var(--bgColor);
 .main-nav {
   display: flex;
   flex-flow: column;
-  grid-area: nav;
 }
+
 .intro {
-  grid-area: intro;
+  min-height: 40vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 .benefits {
-  grid-area: benefits;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.benefits li{
+  list-style-type: circle;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  text-decoration: underline;
+  text-decoration-color: #EC994B;
+}
+#project-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr) ;
+  gap: 1rem;
+  padding: 0rem 0.5rem;
+}
+#gabion-wall {
+  background-image: url(/img/gabion-wall.jpg);
+}
+#foundation {
+  background-image: url(/img/foundation.jpg);
+}
+#floor-epoxy {
+  background-image: url(/img/floor-epoxy.jpg);
+}
+#bitumen-road {
+  background-image: url(/img/bitumen-road.jpg);
+}
+#special-foundation {
+  background-image: url(/img/special-foundation.jpg);
+}
+#concrete-road {
+  background-image: url(/img/concrete-road.jpg);
+}
+#thermoplastic-paint-parking {
+  background-image: url(/img/thermoplastic-paint-plastic.jpg);
+}
+#mass-concrete {
+  background-image: url(/img/mass-concrete.jpg);
+}
+#project-grid p {
+  display: inline-block;
+  height: 300px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 1.5rem;
 }
 /* Article elements */
 article h2 {
@@ -92,12 +167,12 @@ article ul li {
 .client-logos {
   display: flex;
   flex-flow: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 .client-logos img {
   padding: 0.4rem;
-  height: 3.5rem;
+  height: 3rem;
 }
 
 header{
