@@ -91,6 +91,10 @@ footer img {
   justify-content: center;
 }
 
+.intro p {
+  font-size: 1.2rem;
+}
+
 .benefits {
   display: flex;
   flex-flow: column;
@@ -98,8 +102,13 @@ footer img {
 }
 
 .benefits li{
-  list-style-type: circle;
   padding-bottom: 1rem;
+  list-style-type: none;
+}
+
+.benefits li::before {
+  content: "\25A0\ ";
+  color: var(--highlightColor);
 }
 
 h2 {
@@ -110,39 +119,48 @@ h2 {
   display: grid;
   grid-template-columns: repeat(2,1fr) ;
   gap: 1rem;
-  padding: 0rem 0.5rem;
+  padding: 0.5rem;
 }
-#gabion-wall {
-  background-image: url(/img/gabion-wall.jpg);
+
+.view-all a{
+  display: block;
+  text-align: center;
+  padding: 0.6rem;
+  margin: 0.6rem 1rem;
+  background-color: #73777B;
 }
-#foundation {
-  background-image: url(/img/foundation.jpg);
+
+#project-grid .card {
+  display: inline;
 }
-#floor-epoxy {
-  background-image: url(/img/floor-epoxy.jpg);
+@media only screen and (max-width: 610px) {
+  #project-grid .caption {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
 }
-#bitumen-road {
-  background-image: url(/img/bitumen-road.jpg);
+@media only screen and (min-width: 920px) {
+  #project-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+  }
+  
 }
-#special-foundation {
-  background-image: url(/img/special-foundation.jpg);
+
+#project-grid .card .caption{
+  text-align: center;
+  margin-top: -0.4rem;
+  background-color: var(--textColor);
+  color: var(--bgColor);
+  padding: 0.1rem;
+  border-radius:0 0 1rem 1rem; 
 }
-#concrete-road {
-  background-image: url(/img/concrete-road.jpg);
-}
-#thermoplastic-paint-parking {
-  background-image: url(/img/thermoplastic-paint-plastic.jpg);
-}
-#mass-concrete {
-  background-image: url(/img/mass-concrete.jpg);
-}
-#project-grid p {
-  display: inline-block;
-  height: 300px;
-  color: white;
-  font-weight: 600;
-  font-size: 1.3rem;
-  border-radius: 1.5rem;
+
+#project-grid .card img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
 }
 /* Article elements */
 article h2 {
@@ -154,7 +172,7 @@ p {
 }
 
 article ul li {
-  list-style-position: inside;
+  font-size: 1.1rem;
 }
 
 /* Logo */
