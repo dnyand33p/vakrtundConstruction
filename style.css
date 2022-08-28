@@ -129,6 +129,11 @@ main nav.gallery ul .imgs {
   gap: 1rem;
   padding: 0.5rem;
 }
+@media screen and (max-width:600px) {
+  main nav.gallery ul .imgs img{
+    max-height: 15rem;
+  }
+}
 
 @media screen and (min-width: 920px) {
   main nav.gallery ul .imgs {
