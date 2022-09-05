@@ -43,14 +43,19 @@ a {
 
 .main-nav ul li{
   display: inline;
-  letter-spacing: 0.02rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.03rem;
+  font-weight: 500;
+  font-size: 1.3rem;
 }
+
 
 .main-nav li a {
 color: var(--bgColor);
 }
 .main-nav li:hover {
   color: var(--bgColor2);
+  font-size: 1.4rem;
 }
 
 #contact-short {
@@ -263,4 +268,51 @@ article ul li {
 
 header{
   background-color: var(--textColor);
+}
+
+/* Form */
+
+main#contact {
+  display: flex;
+  justify-content: center;
+}
+#contact form {
+padding: 1rem 0rem;
+display: inline-block;
+}
+
+main#contact label {
+  font-size: 1.2rem;
+}
+
+main#contact input {
+  margin-left: 0.4rem;
+  margin-bottom: 1rem;
+  height: 1.3rem;
+}
+#contact form p {
+display: flex;
+justify-content: space-between;
+}
+
+main#contact textarea {
+  min-height: 4rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+  background-color: #15133C;
+  color: white;
+}
+
+/* formSuccess */
+
+main#formSuccess  {
+  height: 50vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
